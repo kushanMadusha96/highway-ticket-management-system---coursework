@@ -1,7 +1,0 @@
-echo "# highway-ticket-management-system---coursework" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/kushanMadusha96/highway-ticket-management-system---coursework.git
-git push -u origin main
