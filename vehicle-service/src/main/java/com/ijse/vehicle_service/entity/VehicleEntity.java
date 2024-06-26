@@ -1,33 +1,34 @@
-package lk.ijse.ticket.service.entity;
+package com.ijse.vehicle_service.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "ticket")
-public class TicketEntity {
+@Table(name = "vehicle")
+public class VehicleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long vehicleId;
+
+    @Column(nullable = false, unique = true)
+    private String registrationNumber;
 
     @Column(nullable = false)
-    private String vehicleNumber;
+    private String ownerName;
 
     @Column(nullable = false)
-    private LocalDateTime issuedAt;
+    private String manufacturer;
 
     @Column(nullable = false)
-    private String status;
+    private String model;
 
     @Column(nullable = false)
-    private Double fineAmount;
+    private Integer manufactureYear;
 
 //    @ManyToOne
 //    @JoinColumn(name = "user_id", nullable = false)

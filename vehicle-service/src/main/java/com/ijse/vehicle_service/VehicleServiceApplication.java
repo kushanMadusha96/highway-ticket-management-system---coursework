@@ -1,4 +1,4 @@
-package lk.ijse.ticket.service;
+package com.ijse.vehicle_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,11 +9,12 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class TicketServiceApplication {
+public class VehicleServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TicketServiceApplication.class, args);
+		SpringApplication.run(VehicleServiceApplication.class, args);
 	}
+
 	@Bean
 	@LoadBalanced
 	public RestTemplate restTemplate() {
